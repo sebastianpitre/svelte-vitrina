@@ -4,20 +4,25 @@
     import { isModalOpen } from '../stores/modalStore.js';
     import { totalProducts, productCount, addToCart } from '../stores/cart.js';
     
-    let user = null;
+    import { Router, Route, link } from 'svelte-routing';
+    import { fetchUserProfile } from '../api/user';
+    import { user } from '../stores/user'; // Store para guardar los datos del usuario
 
-    onMount(() => {
-        const storedUser = localStorage.getItem("user");
-        if (storedUser) {
-            user = JSON.parse(storedUser);
+    let userProfile = {};
+
+    // Llamar a la función al montar el componente
+    onMount(async () => {
+        try {
+            userProfile = await fetchUserProfile();
+            user.set(userProfile); // Guardar los datos en el store
+        } catch (error) {
+            console.error('No se pudo obtener el perfil del usuario:', error);
         }
-        updatePath(window.location.pathname);
     });
 
-    function logout() {
-        localStorage.removeItem("user");
-        window.location.href = "/login";
-    }
+    // Obtener el ID del primer rol (si existe)
+    $: roleId = userProfile.roles?.[0]?.id ?? 'No tiene roles asignados';
+    $: roleName = userProfile.roles?.[0]?.nombre ?? 'Sin rol';
 
     function openModal() {
         isModalOpen.set(true);
@@ -44,10 +49,10 @@
                     </div>
                     
                 </a>
-                {#if user}
+                {#if userProfile && userProfile.nombres}
 
                     <!-- ADMIN -->
-                    {#if user.rol === 'admin'}
+                    {#if roleId === 1}
                         <a class="col p-1 text-center" href="/perfil" on:click={() => updatePath('/perfil')}>
                             <div class="{isActive('/perfil')}">
                                 <span class="material-symbols-outlined text-white " style="border-radius: 50%; font-size: 28px;">person</span>
@@ -73,7 +78,7 @@
                         </button>
 
                         <!-- USUARIO -->
-                        {:else if user.rol === 'user'}
+                        {:else if roleId === 2}
                         <a class="col p-1 text-center" href="/perfil" on:click={() => updatePath('/perfil')}>
                             <div class="{isActive('/perfil')}">
                                 <span class="material-symbols-outlined text-white " style="border-radius: 50%; font-size: 28px;">person</span>

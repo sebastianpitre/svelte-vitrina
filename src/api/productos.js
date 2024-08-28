@@ -1,6 +1,7 @@
 import { fetchWithAuth } from './auth'; // Verifica que la ruta sea correcta
 
 // FETCH PRODUCTOS 🚩...
+
 export async function getProductos() {
     try {
         const products = await fetchWithAuth('http://localhost:8086/api/admin/productos');

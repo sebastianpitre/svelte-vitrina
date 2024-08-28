@@ -14,7 +14,13 @@
             console.error('No se pudo obtener el perfil del usuario:', error);
         }
     });
+
+    // Obtener el ID del primer rol (si existe)
+    $: roleId = userProfile.roles?.[0]?.id ?? 'No tiene roles asignados';
+    $: roleName = userProfile.roles?.[0]?.nombre ?? 'Sin rol';
 </script>
 
 <!-- Aquí puedes usar los datos del usuario en el template -->
 <h1>Bienvenido, {userProfile.nombres} {userProfile.apellidos}</h1>
+
+<p>Tu rol es: {roleName} (ID: {roleId})</p>

@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import { getCategorias } from '../api/productos';
+    import { getCategorias } from '../api/categorias';
     import Nav from '../components/nav.svelte';
 
     let products = [];

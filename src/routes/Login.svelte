@@ -1,6 +1,5 @@
 <script>
     import { login } from '../api/auth';
-  import Nav from '../components/nav.svelte';
     let email = '';
     let password = '';
     let errorMessage = '';
