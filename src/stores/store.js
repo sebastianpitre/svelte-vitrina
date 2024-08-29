@@ -12,7 +12,7 @@ function validateTokenPeriodically() {
         authToken.subscribe(async (token) => {
             if (token) {
                 try {
-                    const response = await fetch('http://localhost:8086/auth/perfil', {
+                    const response = await fetch('http://localhost:8086/auth/cuenta', {
                         method: 'GET',
                         headers: {
                             'Authorization': `Bearer ${token}`,

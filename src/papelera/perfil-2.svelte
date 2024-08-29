@@ -2,6 +2,8 @@
     import { fetchUserProfile } from '../api/user';
     import { user } from '../stores/user'; // Store para guardar los datos del usuario
     import { onMount } from 'svelte';
+    import Menufooter from "../components/menufooter.svelte";
+    import Slide from "../components/slide.svelte";
 
     let userProfile = {};
 

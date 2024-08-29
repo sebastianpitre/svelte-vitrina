@@ -3,12 +3,12 @@
     import { getProductos } from '../api/productos';
     import Nav from '../components/nav.svelte';
 
-    let products = [];
+    let productos = [];
     let errorMessage = '';
 
     onMount(async () => {
         try {
-            products = await getProductos();
+            productos = await getProductos();
         } catch (error) {
             errorMessage = 'No se pudieron cargar los productos.';
         }
@@ -21,11 +21,11 @@
     {#if errorMessage}
         <p>{errorMessage}</p>
     {/if}
-    {#if products.length === 0}
+    {#if productos.length === 0}
         <p>No hay productos disponibles.</p>
     {/if}
     <ul>
-        {#each products as product}
+        {#each productos as product}
             <li>{product.nombre} - {product.precio}</li>
         {/each}
     </ul>

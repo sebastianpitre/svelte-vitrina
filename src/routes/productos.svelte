@@ -1,85 +1,31 @@
 <script>
+	import Menufooter from './../components/menufooter.svelte';
 	import Footer from './../components/footer.svelte';
-    import Swal from "sweetalert2";
-    import Nav from '../components/nav.svelte';
+	import Nav from '../components/nav.svelte';
 
+    import { eliminarProducto } from '../api/productos';
     import { onMount } from 'svelte';
-    import { protectRoute } from '../stores/auth';
-    import MenuAcciones from '../components/MenuAcciones.svelte';
-    import Menufooter from '../components/menufooter.svelte';
 
-    onMount(() => {
-        protectRoute('admin');
-    });
+    import { getProductos } from '../api/productos';
 
-    let listCategorias = [];
-    let listProductos = [];
+    let productos = [];
+    let errorMessage = '';
 
-    fetch("http://localhost:8086/api/publico/categorias")
-        .then((response) => response.json())
-        .then((results) => (listCategorias = results));
-  
-    fetch("http://localhost:8086/api/publico/productos")
-  
-    .then((response)=>response.json())
-    .then((results)=> (listProductos=results))
-
-
-    async function eliminarProducto(id) {
-    try {
-        const result = await Swal.fire({
-            
-            title: '¿Estás seguro?',
-            text: 'Esta acción no se puede deshacer',
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
-            confirmButtonText: 'Sí, eliminar'
-        });
-        
-        if (result.isConfirmed) {
-            const response = await fetch(`http://localhost:8086/api/publico/productos${id}`, {
-                method: 'DELETE',
-            });
-
-            if (response.ok) {
-                // Actualizar la lista de productos después de la eliminación
-                listProductos = listProductos.filter(producto => producto.id !== id);
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: '¡Eliminado!',
-                    text: 'El producto ha sido eliminado.',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            } else {
-                Swal.fire(
-                    'Error',
-                    `Hubo un problema al eliminar el producto: ${response.statusText}`,
-                    'error'
-                );
-            }
+    onMount(async () => {
+        try {
+            productos = await getProductos();
+        } catch (error) {
+            errorMessage = 'No se pudieron cargar los productos.';
         }
-    } catch (error) {
-        Swal.fire(
-            'Error',
-            `Hubo un problema al eliminar el producto: ${error}`,
-            'error'
-        );
-    }
-}
-
+    });
 
 
 </script>
 
 
 <main>
-    <Nav/>
 
-    <MenuAcciones/>
+    <Nav/>
     <div class="container-fluid">
         <div class="row">
 
@@ -100,7 +46,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {#each listProductos as values}
+                                {#if errorMessage}
+                                <tr><td><p>{errorMessage}</p></td></tr>
+                                {/if}
+                                {#if productos.length === 0}
+                                <tr><td><p>No hay productos disponibles.</p></td></tr>
+                                {/if}
+                                {#each productos as values}
                                 <tr>
                                     <td>
                                         <div class="d-flex px-2 py-1">
@@ -110,11 +62,11 @@
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h5 class="mb-0 text-sm">{values.nombre}</h5>
                                                 
-                                                {#each listCategorias as item}
+                                                <!-- {#each listCategorias as item}
                                                     {#if item.id === values.idCategoria}
                                                         <p class="text-sm mb-0">Categoria: {item.nombre}</p>
                                                     {/if}
-                                                {/each}
+                                                {/each} -->
                                             </div>
                                         </div>
                                     </td>
@@ -156,12 +108,8 @@
             </div>
         </div>
     </div>
-
-    
-
     <Menufooter/>
-
-    <Footer/>
+<Footer></Footer>
 </main>
 
 <style>

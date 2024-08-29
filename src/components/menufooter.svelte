@@ -53,8 +53,8 @@
 
                     <!-- ADMIN -->
                     {#if roleId === 1}
-                        <a class="col p-1 text-center" href="/perfil" on:click={() => updatePath('/perfil')}>
-                            <div class="{isActive('/perfil')}">
+                        <a class="col p-1 text-center" href="/cuenta" on:click={() => updatePath('/cuenta')}>
+                            <div class="{isActive('/cuenta')}">
                                 <span class="material-symbols-outlined text-white " style="border-radius: 50%; font-size: 28px;">person</span>
                                 <p class="m-0 mt-n3 pt-1 text-white" style="font-size: 12px;">Mi cuenta</p>
                             </div>
@@ -79,8 +79,8 @@
 
                         <!-- USUARIO -->
                         {:else if roleId === 2}
-                        <a class="col p-1 text-center" href="/perfil" on:click={() => updatePath('/perfil')}>
-                            <div class="{isActive('/perfil')}">
+                        <a class="col p-1 text-center" href="/cuenta" on:click={() => updatePath('/cuenta')}>
+                            <div class="{isActive('/cuenta')}">
                                 <span class="material-symbols-outlined text-white " style="border-radius: 50%; font-size: 28px;">person</span>
                                 <p class="m-0 mt-n3 pt-1 text-white" style="font-size: 12px;">Mi cuenta</p>
                             </div>
@@ -101,8 +101,8 @@
                     {/if}
                 {:else}
 
-                <a class="col p-1 text-center" href="/login" on:click={() => updatePath('/perfil')}>
-                    <div class="{isActive('/perfil')}">
+                <a class="col p-1 text-center" href="/login" on:click={() => updatePath('/cuenta')}>
+                    <div class="{isActive('/cuenta')}">
                         <span class="material-symbols-outlined text-white " style="border-radius: 50%; font-size: 28px;">person</span>
                         <p class="m-0 mt-n3 pt-1 text-white" style="font-size: 12px;">Mi cuenta</p>
                     </div>

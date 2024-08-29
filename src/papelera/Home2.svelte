@@ -1,14 +1,14 @@
 <script>
-  import Car from './components/car.svelte';
+  import Car from '../components/car.svelte';
   import { onMount } from 'svelte';
-  import Card from './components/card.svelte';
-  import Category from './components/category.svelte';
-  import { selectedCategory } from './stores/stores';
+  import Card from '../components/card.svelte';
+  import Category from '../components/category.svelte';
+  import { selectedCategory } from '../stores/stores';
 
-  import Header from './components/header.svelte';
+  import Header from '../components/header.svelte';
 
   // modal carrito
-  import { isModalOpen } from './stores/modalStore.js';
+  import { isModalOpen } from '../stores/modalStore.js';
 
   function openModal() {
     isModalOpen.set(true);
@@ -60,9 +60,9 @@
 
   // carrito 
 
-  import { cart, addToCart, incrementQuantity, decrementQuantity } from './stores/cart';
-  import Footer from './components/footer.svelte';
-  import Menufooter from './components/menufooter.svelte';
+  import { cart, addToCart, incrementQuantity, decrementQuantity } from '../stores/cart';
+  import Footer from '../components/footer.svelte';
+  import Menufooter from '../components/menufooter.svelte';
 
   let listProductos = []; // Aquí obtienes tu lista de productos
 
