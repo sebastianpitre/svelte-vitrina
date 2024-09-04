@@ -17,7 +17,7 @@
           <h5 class="text-edo text-success">Contacto</h5>
             <ul class="flex-column nav">
               <li class="nav-item text-white">
-                Ubicación: Km 7 via la pazgjhasdfghjk
+                Ubicación: Km 7 via la paz
               </li>
               <li class="nav-item text-white">
                 correo: vitrinaweb@sena.edu.co

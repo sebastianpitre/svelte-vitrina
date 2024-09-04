@@ -92,7 +92,7 @@
       </div>
 
       <div class="container my-4">
-        <div class="row cursor-pointer "on:click={handleLogout}>
+        <div class="row cursor-pointer " on:click={handleLogout}>
           <div class="col-auto p-0 ps-2 pt-3 pb-1">
             <span class="material-symbols-outlined text-xl text-danger">logout</span>
           </div>

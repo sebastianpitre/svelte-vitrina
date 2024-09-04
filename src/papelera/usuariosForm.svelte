@@ -1,5 +1,5 @@
 <script>
-    import { authToken } from '../stores/store';
+    import { authToken } from './store';
     import { onMount } from 'svelte';
     import { navigate } from 'svelte-routing';
 

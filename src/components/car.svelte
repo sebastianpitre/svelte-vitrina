@@ -1,5 +1,6 @@
 <!-- src/components/Modal.svelte -->
 <script>
+  import { Router, Route, link } from 'svelte-routing';
   import { isModalOpen } from "../stores/modalStore.js";
   import Carrito from "./carrito.svelte";
   import { vaciarCarrito } from '../stores/cart';
@@ -24,9 +25,9 @@
         <div class="col-6">
           <button class="btn btn-sm btn-danger" on:click={vaciarCarrito}>vaciar carrito</button>
         </div>
-        <div class="col-6">
+        <a use:link href="/pedido" class="col-6">
           <button class="btn btn-sm btn-success">Confirmar pedido</button>
-        </div>
+        </a>
       </div>
     </div>
   </div>

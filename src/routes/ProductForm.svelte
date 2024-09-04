@@ -110,98 +110,98 @@
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>SKU</label>
+              <label for="SKU">SKU</label>
               <input type="text" class="form-control" bind:value={sku} required />
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>Nombre</label>
+              <label for="Nombre">Nombre</label>
               <input type="text" class="form-control" bind:value={nombre} required />
             </div>
           </div>
 
           <div class="col-12 col-md-12">
             <div class="input-group input-group-static my-2">
-              <label>Descripción</label>
+              <label for="Descripción">Descripción</label>
               <textarea class="form-control" bind:value={descripcion} required></textarea>
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>URL Imagen</label>
+              <label for="URL">URL Imagen</label>
               <input type="url" class="form-control" bind:value={urlImagen} required />
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>URL Ficha Técnica</label>
+              <label for="URL">URL Ficha Técnica</label>
               <input type="url" class="form-control" bind:value={urlFichaTecnica} />
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>Unidad de Producto</label>
+              <label for="Unidad">Unidad de Producto</label>
               <input type="text" class="form-control" bind:value={unidadProducto} required />
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>Cantidad</label>
+              <label for="Cantidad">Cantidad</label>
               <input type="number" class="form-control" bind:value={cantidad} required />
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>Precio</label>
+              <label for="Precio">Precio</label>
               <input type="number" class="form-control" bind:value={precio} required />
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>Descuento</label>
+              <label for="Descuento">Descuento</label>
               <input type="number" class="form-control" bind:value={descuento} required />
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>Stock</label>
+              <label for="Stock">Stock</label>
               <input type="number" class="form-control" bind:value={stock} required />
             </div>
           </div>
 
           <div class="col-12 col-md-3">
             <div class="form-check form-switch my-2">
-              <label class="form-check-label">Promoción</label>
+              <label for="activo" class="form-check-label">Promoción</label>
               <input type="checkbox" class="form-check-input" bind:checked={promocion} />
             </div>
           </div>
 
           <div class="col-12 col-md-3">
             <div class="form-check form-switch my-2">
-              <label class="form-check-label">Activo</label>
+              <label for="activo" class="form-check-label">Activo</label>
               <input type="checkbox" class="form-check-input" bind:checked={activo} />
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>ID Categoría</label>
+              <label for="ID Categoría">ID Categoría</label>
               <input type="number" class="form-control" bind:value={idCategoria} required />
             </div>
           </div>
 
           <div class="col-12 col-md-6">
             <div class="input-group input-group-static my-2">
-              <label>ID Usuario</label>
+              <label for="ID Usuario">ID Usuario</label>
               <input type="number" class="form-control" bind:value={idUsuario} required />
             </div>
           </div>

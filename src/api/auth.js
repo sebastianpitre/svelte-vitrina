@@ -65,7 +65,7 @@ export async function fetchWithAuth(url, options = {}) {
 export async function logout() {
     try {
         // Realizar la solicitud de logout al backend
-        const response = await fetchWithAuth('http://localhost:8086/api/auth/admin/logout', {
+        const response = await fetch('http://localhost:8086/api/auth/admin/logout', {
             method: 'POST',
         });
 

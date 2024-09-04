@@ -370,6 +370,338 @@
       "urlImagen": "/img/img-sena/sena3.jpeg",
       "posicionY": 83
     }
-    
+  ],
+  "pedidos": [
+    {
+      "id": "0",
+      "montoTotal": 210000,
+      "estadoPedido": "APROBADO",
+      "fechaCreacion": "2024-09-02T22:30:34.356Z",
+      "pedidoProductosDto": [
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 20000,
+          "productos": {
+            "id": 2,
+            "sku": "dsdgsgdsd",
+            "nombre": "arepa gedionda a huevo",
+            "descripcion": "1",
+            "urlImagen": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "urlFichaTecnica": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 20000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 60000
+        },
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 50000,
+          "productos": {
+            "id": 1,
+            "sku": "123dd",
+            "nombre": "pollo mananurero",
+            "descripcion": "1",
+            "urlImagen": "https://i.blogs.es/8ceb02/pollo_entero/1366_2000.jpg",
+            "urlFichaTecnica": null,
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 50000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 150000
+        }
+      ],
+      "idUsuario": 1,
+      "idPago": 1,
+      "totalOrderPrice": 210000
+    },
+    {
+      "id": "0",
+      "montoTotal": 210000,
+      "estadoPedido": "APROBADO",
+      "fechaCreacion": "2024-09-02T22:30:55.566Z",
+      "pedidoProductosDto": [
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 20000,
+          "productos": {
+            "id": 2,
+            "sku": "dsdgsgdsd",
+            "nombre": "arepa gedionda a huevo",
+            "descripcion": "1",
+            "urlImagen": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "urlFichaTecnica": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 20000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 60000
+        },
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 50000,
+          "productos": {
+            "id": 1,
+            "sku": "123dd",
+            "nombre": "pollo mananurero",
+            "descripcion": "1",
+            "urlImagen": "https://i.blogs.es/8ceb02/pollo_entero/1366_2000.jpg",
+            "urlFichaTecnica": null,
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 50000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 150000
+        }
+      ],
+      "idUsuario": 1,
+      "idPago": 1,
+      "totalOrderPrice": 210000
+    },
+    {
+      "id": 0,
+      "montoTotal": 210000,
+      "estadoPedido": "APROBADO",
+      "fechaCreacion": "2024-09-02T22:31:45.347Z",
+      "pedidoProductosDto": [
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 20000,
+          "productos": {
+            "id": 2,
+            "sku": "dsdgsgdsd",
+            "nombre": "arepa gedionda a huevo",
+            "descripcion": "1",
+            "urlImagen": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "urlFichaTecnica": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 20000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 60000
+        },
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 50000,
+          "productos": {
+            "id": 1,
+            "sku": "123dd",
+            "nombre": "pollo mananurero",
+            "descripcion": "1",
+            "urlImagen": "https://i.blogs.es/8ceb02/pollo_entero/1366_2000.jpg",
+            "urlFichaTecnica": null,
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 50000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 150000
+        }
+      ],
+      "idUsuario": 1,
+      "idPago": 1,
+      "totalOrderPrice": 210000
+    },
+    {
+      "id": 0,
+      "montoTotal": 215000,
+      "estadoPedido": "APROBADO",
+      "fechaCreacion": "2024-09-02T22:44:26.484Z",
+      "pedidoProductosDto": [
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 20000,
+          "productos": {
+            "id": 2,
+            "sku": "dsdgsgdsd",
+            "nombre": "arepa DE HUEVO",
+            "descripcion": "1",
+            "urlImagen": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "urlFichaTecnica": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 20000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 60000
+        },
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 50000,
+          "productos": {
+            "id": 1,
+            "sku": "123dd",
+            "nombre": "pollo mananurero",
+            "descripcion": "1",
+            "urlImagen": "https://i.blogs.es/8ceb02/pollo_entero/1366_2000.jpg",
+            "urlFichaTecnica": null,
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 50000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 150000
+        },
+        {
+          "id": 0,
+          "cantidad": 1,
+          "precio": 5000,
+          "productos": {
+            "id": 10,
+            "sku": "sadasdasd",
+            "nombre": "LIMON",
+            "descripcion": "asdasasd\n",
+            "urlImagen": "https://www.laboratoirealtho.fr/sites/default/files/styles/medium/public/citron_vert_0.jpg?itok=6_GtxEy1",
+            "urlFichaTecnica": "https://www.laboratoirealtho.fr/sites/default/files/styles/medium/public/citron_vert_0.jpg?itok=6_GtxEy1",
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 5000,
+            "promocion": false,
+            "stock": 39,
+            "descuento": 10,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 5000
+        }
+      ],
+      "idUsuario": 1,
+      "idPago": 1,
+      "totalOrderPrice": 215000
+    },
+    {
+      "id": 0,
+      "montoTotal": 215000,
+      "estadoPedido": "APROBADO",
+      "fechaCreacion": "2024-09-02T22:44:58.863Z",
+      "pedidoProductosDto": [
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 20000,
+          "productos": {
+            "id": 2,
+            "sku": "dsdgsgdsd",
+            "nombre": "arepa DE HUEVO",
+            "descripcion": "1",
+            "urlImagen": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "urlFichaTecnica": "https://guiadelacocina.com/images/stories/2012_01/arepa-de-huevo.jpg",
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 20000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 60000
+        },
+        {
+          "id": 0,
+          "cantidad": 3,
+          "precio": 50000,
+          "productos": {
+            "id": 1,
+            "sku": "123dd",
+            "nombre": "pollo mananurero",
+            "descripcion": "1",
+            "urlImagen": "https://i.blogs.es/8ceb02/pollo_entero/1366_2000.jpg",
+            "urlFichaTecnica": null,
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 50000,
+            "promocion": true,
+            "stock": 1222,
+            "descuento": 1,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 150000
+        },
+        {
+          "id": 0,
+          "cantidad": 1,
+          "precio": 5000,
+          "productos": {
+            "id": 10,
+            "sku": "sadasdasd",
+            "nombre": "LIMON",
+            "descripcion": "asdasasd\n",
+            "urlImagen": "https://www.laboratoirealtho.fr/sites/default/files/styles/medium/public/citron_vert_0.jpg?itok=6_GtxEy1",
+            "urlFichaTecnica": "https://www.laboratoirealtho.fr/sites/default/files/styles/medium/public/citron_vert_0.jpg?itok=6_GtxEy1",
+            "unidadProducto": "KG",
+            "cantidad": 1,
+            "precio": 5000,
+            "promocion": false,
+            "stock": 39,
+            "descuento": 10,
+            "activo": true,
+            "idCategoria": 1,
+            "idUsuario": 1
+          },
+          "totalProducto": 5000
+        }
+      ],
+      "idUsuario": 1,
+      "idPago": 1,
+      "totalOrderPrice": 215000
+    }
   ]
 }

@@ -1,12 +1,15 @@
 <script>
-	import Menufooter from './../components/menufooter.svelte';
-	import Footer from './../components/footer.svelte';
+    import { isAuthenticated, checkAuth } from '../stores/auth';
+	import Menufooter from '../components/menufooter.svelte';
+	import Footer from '../components/footer.svelte';
 	import Nav from '../components/nav.svelte';
+    
 
     import { eliminarProducto } from '../api/productos';
     import { onMount } from 'svelte';
 
     import { getProductos } from '../api/productos';
+    import MenuAcciones from '../components/MenuAcciones.svelte';
 
     let productos = [];
     let errorMessage = '';
@@ -19,6 +22,15 @@
         }
     });
 
+    // redirigir si no iniciado sesion
+
+    let isAuth = false;
+    onMount(async () => {
+        isAuth = await checkAuth();
+        if (!isAuth) {
+            window.location.href = '/login'; // Redirige al login si no está autenticado
+        }
+    });
 
 </script>
 
@@ -26,6 +38,8 @@
 <main>
 
     <Nav/>
+
+    <MenuAcciones/>
     <div class="container-fluid">
         <div class="row">
 

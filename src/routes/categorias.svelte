@@ -4,7 +4,6 @@
     import Swal from 'sweetalert2';
     import Footer from '../components/footer.svelte';
     import Nav from '../components/nav.svelte';
-    import Slide from '../components/slide.svelte';
     import MenuAcciones from '../components/MenuAcciones.svelte';
 
     // Definimos las variables reactivas para el estado del formulario

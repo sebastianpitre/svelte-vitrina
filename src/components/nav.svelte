@@ -1,4 +1,5 @@
 <script>
+	import Car from './car.svelte';
   import { Router, Route, link } from 'svelte-routing';
   import { fetchUserProfile } from '../api/user';
   import { user } from '../stores/user'; // Store para guardar los datos del usuario
@@ -27,7 +28,17 @@
     isModalOpen.set(true);
   }
 
+  import { logout } from '../api/auth';
+
+  // cerrar sesion
+    function handleLogout() {
+        logout();
+    }
+
+
 </script>
+
+<Car/>
 
 <div class="position-sticky mobile-menu z-index-sticky mb-6 top-0 d-none d-md-block">
   <div class="row">
@@ -58,6 +69,14 @@
 
                 {#if roleId === 1}
                 
+                <li class="nav-item ">
+                      
+                  <button class="btn btn-sm btn-success mb-0" on:click={openModal}>
+                    <img class="icon opacity-9 mt-n1" src="/img/icon/cart.svg" alt="icon" width="20px">
+                    <span class=" me-xl-0">carrito</span>
+                  </button>
+                </li> 
+
                 <li class="nav-item dropdown dropdown-hover ms-2">
                   <a role="button" class=" btn btn-sm btn-blue mb-0" id="dropdownMenuDocs" data-bs-toggle="dropdown" aria-expanded="false">
                     <img class="icon opacity-9 mt-n1" src="/img/icon/admin.svg" alt="icon" width="20px">
@@ -79,7 +98,7 @@
                           </a>
                         </li>
                         <li class="nav-item list-group-item border-0 p-0">
-                          <button class="dropdown-item py-2 ps-3 border-radius-md bg-danger">
+                          <button class="dropdown-item py-2 ps-3 border-radius-md bg-danger" on:click={handleLogout}>
                             <h6 class="dropdown-header text-white font-weight-bolder d-flex justify-content-cente align-items-center p-0">cerrar sesion</h6>
                           </button>
                         </li>
@@ -98,7 +117,7 @@
                         </a>
                       </div>
                       <div class="col-md-12 g-0">
-                        <button class="dropdown-item py-2 ps-3 border-radius-md bg-danger">
+                        <button class="dropdown-item py-2 ps-3 border-radius-md bg-danger" on:click={handleLogout}>
                           <h6 class="dropdown-header text-white font-weight-bolder d-flex justify-content-cente align-items-center p-0">cerrar sesion</h6>
                         </button>
                       </div>
@@ -129,7 +148,7 @@
                             </a>
                           </li>
                           <li class="nav-item list-group-item border-0 p-0">
-                            <button class="dropdown-item py-2 ps-3 border-radius-md bg-danger">
+                            <button class="dropdown-item py-2 ps-3 border-radius-md bg-danger" on:click={handleLogout}>
                               <h6 class="dropdown-header text-white font-weight-bolder d-flex justify-content-cente align-items-center p-0">cerrar sesion</h6>
                             </button>
                           </li>
@@ -142,7 +161,7 @@
                           </a>
                         </div>
                         <div class="col-md-12 g-0">
-                          <button class="dropdown-item py-2 ps-3 border-radius-md bg-danger">
+                          <button class="dropdown-item py-2 ps-3 border-radius-md bg-danger" on:click={handleLogout}>
                             <h6 class="dropdown-header text-white font-weight-bolder d-flex justify-content-cente align-items-center p-0">cerrar sesion</h6>
                           </button>
                         </div>

@@ -1,6 +1,5 @@
 <script>
   import { onMount } from 'svelte';
-  import { isAuthenticated, checkAuth } from './stores/auth';
 
   import Menufooter from './components/menufooter.svelte';
   import Nav from './components/nav.svelte';
@@ -69,15 +68,6 @@
     addToCart(producto);
   }
 
-// redirigir si no iniciado sesion
-
-    let isAuth = false;
-    onMount(async () => {
-        isAuth = await checkAuth();
-        if (!isAuth) {
-            window.location.href = '/login'; // Redirige al login si no está autenticado
-        }
-    });
 </script>
 
 <main>
